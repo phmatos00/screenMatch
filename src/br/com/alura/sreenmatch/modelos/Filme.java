@@ -1,0 +1,81 @@
+package br.com.alura.sreenmatch.modelos;
+
+public class Filme {
+
+    private String nome;
+    private String sinopse;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
+    private int duracaoEmMinutos;
+
+
+    // Getters: Usa-se para acessar um atributo privado, apenas o expõe para cosnulta.
+
+    public int getTotalDeAvaliacoes() {
+        return totalDeAvaliacoes;
+    }
+
+    public String getSinopse() {
+
+        return sinopse;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+
+    // Setters:  Permite modificar o valor do atributo de um objeto.
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setSinopse(String sinopse) {
+        this.sinopse = sinopse;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+
+    // Metodos
+
+    public void fichaTecnica() {
+        System.out.println("Nome do br.com.alura.sreenmatch.modelos.Filme: " + nome);
+        System.out.println("Ano de lançamento: " + anoDeLancamento);
+        System.out.println("Tempo de filme: " + duracaoEmMinutos + "Min");
+        System.out.println("Sinopse: " + sinopse);
+    }
+
+    public void passarAvaliacao(double nota) {
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    public double mediaDoFilme() {
+        return somaDasAvaliacoes / totalDeAvaliacoes;
+
+
+    }
+
+}
