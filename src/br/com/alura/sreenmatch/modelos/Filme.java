@@ -13,9 +13,7 @@ public class Filme {
 
     // Getters: Usa-se para acessar um atributo privado, apenas o expõe para cosnulta.
 
-    public int getTotalDeAvaliacoes() {
-        return totalDeAvaliacoes;
-    }
+    public int getTotalDeAvaliacoes() {return totalDeAvaliacoes;}
 
     public String getSinopse() {
 
