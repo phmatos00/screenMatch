@@ -30,5 +30,16 @@ public class Principal {
 
 
 
+        // Series
+
+        Serie lost = new Serie();
+        lost.setNome(" Lost ");
+        lost.setAnoDeLancamento(2004);
+        lost.setSinopse("""
+                Lost é uma série de televisão norte-americana de drama, fantasia e ficção científica que seguiu a vida dos sobreviventes de um acidente aéreo numa misteriosa ilha tropical, 
+                após o avião que viajava de Sydney, Austrália para Los Angeles, Estados Unidos cair em algum lugar do Oceano Pacífico.
+                """);
+
+
     }
 }
