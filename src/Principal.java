@@ -8,39 +8,41 @@ public class Principal {
 
         // Filmes
 
-        Filme filme1 = new Filme();
-        filme1.setNome("Sem dor sem ganho");
-        filme1.setAnoDeLancamento(2013);
-        filme1.setDuracaoEmMinutos(130);
-        filme1.setSinopse("""
-                Daniel Lugo (Mark Wahlberg) adorava malhar e trabalhava como instrutor de fisiculturismo em uma pequena academia, na Flórida, mas ele sonhava grande e queria muito mais. 
-                Disposto a realizar este sonho, convence seu fiel seguidor Adrian Doorbal (Anthony Mackie), e o ex-presidiário Paul Doyle (Dwayne Johnson) a participarem de um golpe. 
-                A vítima será um dos alunos de Daniel na academia, Victor Kershaw (Tony Shalhoub), um cara cheio da grana.
-                O plano até que deu mais ou menos certo,mas os caras queriam mais e um investigador aposentado chamado Ed Dubois (Ed Harris) começa uma perseguição para colocá-los atrás das grades.
-                """);
+        Filme filme = new Filme();
+        filme.setNome("Sem dor sem ganho");
+        filme.setAnoDeLancamento(2013);
+        filme.setDuracaoEmMinutos(130);
 
+        filme.fichaTecnica();
+        filme.passarAvaliacao(8);
+        filme.passarAvaliacao(5);
+        filme.passarAvaliacao(10);
 
-        filme1.fichaTecnica();
-        filme1.passarAvaliacao(8);
-        filme1.passarAvaliacao(5);
-        filme1.passarAvaliacao(10);
-
-        System.out.println("Quantas pessoas avaliaram o filme: " + filme1.getTotalDeAvaliacoes());
+        System.out.println("Quantas pessoas avaliaram o filme: " + filme.getTotalDeAvaliacoes());
 
         //Usei o DACIMALFORMAT para diminuir as casa decimais da nota IMDB
         DecimalFormat df = new DecimalFormat("0.0");
-        System.out.println("Nota IMDB: " + df.format(filme1.mediaDoFilme()));
+        System.out.println("Nota IMDB: " + df.format(filme.mediaDoFilme()));
+        System.out.println();
+        System.out.println();
 
 
 
-        // Series
+         // Series
 
-        Serie lost = new Serie();
-        lost.setNome(" Lost ");
-        lost.setAnoDeLancamento(2004);
-        lost.fichaTecnica();
-        lost.setTemporadas(6);
-        lost.setNumeroDeEpisodios(96);
+        Serie serie = new Serie();
+        serie.setNome("lost");
+        serie.setAnoDeLancamento(2000);
+        serie.setTemporadas(10);
+        serie.setNumeroDeEpisodiosPorTemporada(10);
+        serie.setMinutosPorEpisodios(50);
+
+
+        serie.fichaTecnica();
+        System.out.println("Duração em minutos: " + serie.getDuracaoEmMinutos());
+
+
+
 
 
 
