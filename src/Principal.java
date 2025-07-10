@@ -1,3 +1,4 @@
+import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.sreenmatch.modelos.Filme;
 import br.com.alura.sreenmatch.modelos.Serie;
 
@@ -8,21 +9,21 @@ public class Principal {
 
         // Filmes
 
-        Filme filme = new Filme();
-        filme.setNome("Sem dor sem ganho");
-        filme.setAnoDeLancamento(2013);
-        filme.setDuracaoEmMinutos(130);
+        Filme filme1 = new Filme();
+        filme1.setNome("Sem dor sem ganho");
+        filme1.setAnoDeLancamento(2013);
+        filme1.setDuracaoEmMinutos(130);
 
-        filme.fichaTecnica();
-        filme.passarAvaliacao(8);
-        filme.passarAvaliacao(5);
-        filme.passarAvaliacao(10);
+        filme1.fichaTecnica();
+        filme1.passarAvaliacao(8);
+        filme1.passarAvaliacao(5);
+        filme1.passarAvaliacao(10);
 
-        System.out.println("Quantas pessoas avaliaram o filme: " + filme.getTotalDeAvaliacoes());
+        System.out.println("Quantas pessoas avaliaram o filme: " + filme1.getTotalDeAvaliacoes());
 
         //Usei o DACIMALFORMAT para diminuir as casa decimais da nota IMDB
         DecimalFormat df = new DecimalFormat("0.0");
-        System.out.println("Nota IMDB: " + df.format(filme.mediaDoFilme()));
+        System.out.println("Nota IMDB: " + df.format(filme1.mediaDoFilme()));
         System.out.println();
         System.out.println();
 
@@ -30,21 +31,22 @@ public class Principal {
 
          // Series
 
-        Serie serie = new Serie();
-        serie.setNome("lost");
-        serie.setAnoDeLancamento(2000);
-        serie.setTemporadas(10);
-        serie.setNumeroDeEpisodiosPorTemporada(10);
-        serie.setMinutosPorEpisodios(50);
+        Serie serie1 = new Serie();
+        serie1.setNome("lost");
+        serie1.setAnoDeLancamento(2000);
+        serie1.setTemporadas(10);
+        serie1.setNumeroDeEpisodiosPorTemporada(10);
+        serie1.setMinutosPorEpisodios(50);
 
 
-        serie.fichaTecnica();
-        System.out.println("Duração em minutos: " + serie.getDuracaoEmMinutos());
+        serie1.fichaTecnica();
+        System.out.println("Duração em minutos: " + serie1.getDuracaoEmMinutos());
 
 
-
-
-
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(filme1);
+        calculadora.inclui(serie1);
+        System.out.println(calculadora.getTempoTotal());
 
     }
 }

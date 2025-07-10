@@ -8,7 +8,7 @@ public class Serie extends Titulo {
     private int minutosPorEpisodios;
 
 
-    // Reescrevi o metodo ficha tecnica
+    // Reescrevi o metodo fichaTecnica
     @Override
     public void fichaTecnica() {
         System.out.println("Nome: " + getNome());
