@@ -31,6 +31,5 @@ public class CalculadoraDeTempo {
     public void inclui (Titulo titulo){
         tempoTotal += titulo.getDuracaoEmMinutos();
 
-
     }
 }
