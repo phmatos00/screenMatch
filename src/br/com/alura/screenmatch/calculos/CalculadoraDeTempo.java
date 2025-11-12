@@ -4,32 +4,22 @@ import br.com.alura.sreenmatch.modelos.Filme;
 import br.com.alura.sreenmatch.modelos.Titulo;
 
 public class CalculadoraDeTempo {
-
     private int tempoTotal;
 
-
-
     public int getTempoTotal() {
-        return tempoTotal;
+        return this.tempoTotal;
     }
 
-    public void setTempoTotal(int tempoTotal) {
-        this.tempoTotal = tempoTotal;
-    }
+//    public void inclui(Filme f) {
+//        this.tempoTotal += f.getDuracaoEmMinutos();
+//    }
+//
+//    public void inclui(Serie s) {
+//        this.tempoTotal += s.getDuracaoEmMinutos();
+//    }
 
-
-
-    //fazndo assim eu teria que criar um metdodo para filme e para qualquer outro TITULO e teria que escrever muito codigo.
-
-   // public void inclui(Filme f) {
-     //   tempoTotal += f.getDuracaoEmMinutos();
-
-
-
-    // Aqui eu passo a superclasse desses que ja tem como herdeiros Filme e Serie, pq ambos são um Titulo.
-
-    public void inclui (Titulo titulo){
-        tempoTotal += titulo.getDuracaoEmMinutos();
-
+    public void inclui(Titulo titulo) {
+        System.out.println("Adicionando duração em minutos de " + titulo);
+        this.tempoTotal += titulo.getDuracaoEmMinutos();
     }
 }
