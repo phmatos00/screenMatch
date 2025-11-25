@@ -18,7 +18,7 @@ public class Filme extends Titulo implements Classificavel {
         this.diretor = diretor;
     }
 
-    // Método da interface Classificavel: Define como o Filme é classificado (estrelas)
+    // Método da interface Classificavel: Define como o Filme é classificado (estrelas)nao
     @Override
     public int getClassificacao() {
         return (int) pegaMedia() / 2;
