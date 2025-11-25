@@ -1,4 +1,4 @@
-package br.com.alura.sreenmatch.modelos;
+package br.com.alura.screenmatch.modelos;
 
 import br.com.alura.screenmatch.calculos.Classificavel;
 
@@ -8,6 +8,7 @@ public class Episodio implements Classificavel {
     private Serie serie;
     private int totalVisualizacoes;
 
+    // Getters e Setters
     public int getTotalVisualizacoes() {
         return totalVisualizacoes;
     }
@@ -40,6 +41,7 @@ public class Episodio implements Classificavel {
         this.serie = serie;
     }
 
+    // Regra de negócio: Se tiver mais de 100 visualizações, ganha 4 estrelas.
     @Override
     public int getClassificacao() {
         if (totalVisualizacoes > 100) {

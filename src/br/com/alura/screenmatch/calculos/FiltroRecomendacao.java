@@ -1,8 +1,8 @@
 package br.com.alura.screenmatch.calculos;
 
 public class FiltroRecomendacao {
-    private String recomendacao;
 
+    // Polimorfismo de Interface: Aceita qualquer coisa que seja Classificavel (Filme ou Episodio)
     public void filtra(Classificavel classificavel) {
         if (classificavel.getClassificacao() >= 4) {
             System.out.println("Está entre os preferidos do momento");
