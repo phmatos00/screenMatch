@@ -75,6 +75,7 @@ public class Titulo implements Comparable<Titulo>{
     // --- FIX: Sobrescrita do Método toString() ---
     @Override
     public String toString() {
-        return "Título: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
+        return "Título: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")" + "("+ this.getDuracaoEmMinutos() + "min)";
     }
+
 }

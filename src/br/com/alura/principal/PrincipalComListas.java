@@ -6,6 +6,8 @@ import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -22,14 +24,14 @@ public class PrincipalComListas {
         lost.avalia(8); // Adicionando uma avaliação para a série
 
         // Usando a lista como tipo genérico Titulo (Polimorfismo!)
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new ArrayList<>();
         lista.add(filmeDoPablo);
         lista.add(meuFilme);
         lista.add(outroFilme);
         lista.add(lost);
 
         // Exemplo de lista secundária para demonstração de Collections.sort
-        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        List<String> buscaPorArtista = new ArrayList<>();
         buscaPorArtista.add("Adam Sandler");
         buscaPorArtista.add("AlPachino");
         buscaPorArtista.add("Mark Walberg");
@@ -58,6 +60,21 @@ public class PrincipalComListas {
         // AQUI FORA DO LOOP: Ordenação e Impressão da lista principal (sem erro!)
         System.out.println("\n--- Lista de Títulos Ordenados ---");
         Collections.sort(lista);
+        System.out.println(lista);
+
+        System.out.println("\n--- Lista de Títulos Ordenados por ano ---");
+        lista.sort(Comparator.comparing(Titulo ::getAnoDeLancamento).reversed());// .reversed() é usado para inverter a ordem.
+        System.out.println(lista);
+
+        System.out.println("\nListas ordenadas por Duração em minutos : ");
+        lista.sort(Comparator.comparing(Titulo :: getDuracaoEmMinutos));
+        System.out.println(lista);
+
+        // --- EXERCÍCIO 3: Ordenação por Tamanho do Nome (Usando Lambda) ---
+        System.out.println("\nListas ordenadas por tamanho do nomes");
+        // Usamos uma expressão lambda para criar o critério de comparação:
+        // Para cada Titulo 't', compare o tamanho da string do seu nome.
+        lista.sort(Comparator.comparing(titulo -> titulo.getNome().length()));
         System.out.println(lista);
     }
 }
